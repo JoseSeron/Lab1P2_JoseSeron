@@ -93,6 +93,14 @@ salir = false;
             System.out.println("dianac"+fechaNacimiento.getDate());
             
             
+            int anoact= fechaActual.getYear();
+            int anonac= fechaNacimiento.getYear();
+            int mesact = fechaActual.getMonth();
+            int mesnac = fechaNacimiento.getMonth();
+            int diaac = fechaActual.getDate();
+            int dianac = fechaNacimiento.getDate();
+                   
+            
             if ( ((fechaActual.getYear() - fechaNacimiento.getYear()) < 13)  ) {
                 System.out.println("Es menor de 13 años");
                fechanac = false;
