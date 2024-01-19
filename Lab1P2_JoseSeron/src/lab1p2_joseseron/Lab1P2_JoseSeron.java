@@ -24,10 +24,15 @@ public class Lab1P2_JoseSeron {
         // TODO code application logic here
 
         ArrayList<Usuario> Database = new ArrayList();
-
+        boolean salir = true;
+        
         System.out.println("Laboratorio 1 : Registro de Usuarios\n"
-                + "Jose Roberto Seron\n\n"
-                + "Menu\n"
+                + "Jose Roberto Seron\n\n");
+
+        do {
+            
+        
+        System.out.println("Menu\n"
                 + "1.- Registrar Usuario\n"
                 + "2.- Listar Todo\n"
                 + "3.- Listar Por Dominio");
@@ -48,10 +53,13 @@ public class Lab1P2_JoseSeron {
             case 3: // Listar por Dominio
 
                 break;
+            case 4: // Salir
+salir = false;
+                break;
             default:
                 throw new AssertionError();
         }
-
+} while (salir);
     }
 
     public static ArrayList regUsuario(ArrayList<Usuario> lista) {
