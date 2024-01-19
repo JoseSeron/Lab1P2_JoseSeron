@@ -69,16 +69,36 @@ salir = false;
         String apellido = input.nextLine();
         int mes, dia, ano;
 
-        System.out.println("Ingrese fecha de nacimiento (dd/mm/aaaa): ");
-        String fn = input.next();
-        String[] tokens = fn.split("/");
-        dia = Integer.parseInt(tokens[0]);
-        mes = Integer.parseInt(tokens[1]);
-        ano = Integer.parseInt(tokens[2]);
-
-        Date fechaNacimiento = new Date(ano - 1900, mes - 1, dia);
-        SimpleDateFormat df = new SimpleDateFormat("yyyy/MM/dd");
+            Date fechaActual = new Date();
+            Date fechaNacimiento;
+        boolean fechanac = true;
         
+        do {
+            System.out.println("Ingrese fecha de nacimiento (dd/mm/aaaa): ");
+            String fn = input.next();
+            String[] tokens = fn.split("/");
+            dia = Integer.parseInt(tokens[0]);
+            mes = Integer.parseInt(tokens[1]);
+            ano = Integer.parseInt(tokens[2]);
+
+        
+            fechaNacimiento = new Date(ano - 1900, mes - 1, dia);
+            SimpleDateFormat df = new SimpleDateFormat("yyyy/MM/dd");
+
+            System.out.println("fecah " + fechaActual.getYear());
+            System.out.println("fecah " + fechaNacimiento.getYear());
+            System.out.println("mesactual"+fechaActual.getMonth());
+            System.out.println("mesnac"+fechaNacimiento.getMonth());
+            System.out.println("diaact"+fechaActual.getDate());
+            System.out.println("dianac"+fechaNacimiento.getDate());
+            
+            
+            if ( ((fechaActual.getYear() - fechaNacimiento.getYear()) < 13)  ) {
+                System.out.println("Es menor de 13 años");
+               fechanac = false;
+            }
+        } while ( !fechanac   );
+
         System.out.print("Ingrese correo: ");
         String correo = input.next();
         System.out.print("Ingrese contraseña: ");
