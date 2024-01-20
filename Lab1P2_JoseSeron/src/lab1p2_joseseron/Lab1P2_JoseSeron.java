@@ -81,16 +81,19 @@ salir = false;
             mes = Integer.parseInt(tokens[1]);
             ano = Integer.parseInt(tokens[2]);
 
+            if ( mes>fechaActual.getMonth() && (dia-1)>fechaActual.getDate() ) {
+                ano++;
+            }
         
             fechaNacimiento = new Date(ano - 1900, mes - 1, dia);
             SimpleDateFormat df = new SimpleDateFormat("yyyy/MM/dd");
 
             System.out.println("fecah " + fechaActual.getYear());
             System.out.println("fecah " + fechaNacimiento.getYear());
-            System.out.println("mesactual"+fechaActual.getMonth());
-            System.out.println("mesnac"+fechaNacimiento.getMonth());
-            System.out.println("diaact"+fechaActual.getDate());
-            System.out.println("dianac"+fechaNacimiento.getDate());
+            System.out.println("mesactual "+fechaActual.getMonth());
+            System.out.println("mesnac  "+fechaNacimiento.getMonth());
+            System.out.println("diaact "+fechaActual.getDate());
+            System.out.println("dianac "+fechaNacimiento.getDate());
             
             
             int anoact= fechaActual.getYear();
@@ -99,13 +102,13 @@ salir = false;
             int mesnac = fechaNacimiento.getMonth();
             int diaac = fechaActual.getDate();
             int dianac = fechaNacimiento.getDate();
-                   
             
-            if ( ((fechaActual.getYear() - fechaNacimiento.getYear()) < 13)  ) {
-                System.out.println("Es menor de 13 años");
-               fechanac = false;
+            if ((anoact-anonac)>13) {
+                fechanac = false;
             }
-        } while ( !fechanac   );
+         //   System.out.println("No alcanza la edad minima");
+     
+        } while ( fechanac   );
 
         System.out.print("Ingrese correo: ");
         String correo = input.next();
