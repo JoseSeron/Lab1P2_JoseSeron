@@ -6,6 +6,7 @@ import java.util.Scanner;
 /**
  *
  * @author joser
+ * fila 3 asiento 6
  */
 public class Lab1P2_JoseSeron {
 
@@ -41,11 +42,36 @@ public class Lab1P2_JoseSeron {
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i]+" ");
         }
+        
+        
+        System.out.println("bubblesort");
+        
+        int []arraySorted = bubbleSort(array);
+          for (int i = 0; i < arraySorted.length; i++) {
+            System.out.print(arraySorted[i]+" ");
+        }
      
     }
     
-    public static void bublleSort (int[] arreglo){
+    public static int[] bubbleSort (int[] arreglo){
         
+        for (int i = 0; i < arreglo.length; i++) {
+            for (int j = 0; j < arreglo.length; j++) {
+                if (     (j!=arreglo.length-1)  && arreglo[j]>arreglo[j+1] ) {
+                    int var = arreglo[j];
+                    arreglo[j]=arreglo[j+1];
+                    arreglo[j+1]=arreglo[j];
+                    
+                    bubbleSort(arreglo);
+                    
+                }else {
+                
+                }
+            }
+        }return arreglo;
+        
+
+
 
         
     }
