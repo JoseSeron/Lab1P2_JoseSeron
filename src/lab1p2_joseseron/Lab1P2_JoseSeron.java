@@ -98,9 +98,9 @@ public class Lab1P2_JoseSeron {
         //  System.out.println("entro");
         for (int i = 0; i < arreglo.size(); i++) {
             for (int j = 0; j < arreglo.size(); j++) {
-                if (   (j != arreglo.size() - 1) && (int)arreglo.get(j) > (int)arreglo.get(j+1) ){
+                if (   (j != arreglo.size() - 1) && ((int)arreglo.get(j) > (int)arreglo.get(j+1)) ){
+                    
                     int var = (int)arreglo.get(j);
-                   
                     arreglo.set(j, (int)arreglo.get(j+1));
                     arreglo.set(j+1, var);
                     bubbleSortAL(arreglo);
