@@ -9,9 +9,7 @@ import java.util.Scanner;
  */
 public class Lab1P2_JoseSeron {
 
-    /**
-     * @param args the command line arguments
-     */
+  
     public static void main(String[] args) {
         
         Scanner input = new Scanner(System.in);
@@ -36,11 +34,20 @@ public class Lab1P2_JoseSeron {
                 matriz[i][j]=random.nextInt(10);
             }
         }
-        
         imprimirMatriz(matriz);
         
-        System.out.println("salio while");
+        int [] array = matriz[0];
+        
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i]+" ");
+        }
      
+    }
+    
+    public static void bublleSort (int[] arreglo){
+        
+
+        
     }
     
     public static void imprimirMatriz(int[][]matriz){
