@@ -63,15 +63,21 @@ public class Lab1P2_JoseSeron {
         
         
         
-        System.out.println("\nArreglo Medianas Ordenado");
+        System.out.println("\n\nArreglo Medianas Ordenado");
+        
+     
         
         ArrayList medianasSorted = new ArrayList();
              medianasSorted = bubbleSortAL(medianas);
              
              
         for (int i = 0; i < medianasSorted.size(); i++) {
-            System.out.print("["+i+"]");
+            System.out.print("["+medianasSorted.get(i)+"]");
         }
+       
+        System.out.println("\n\nMediana de medianas");
+        System.out.println(medianasSorted.get(((medianasSorted.size()+1)/2)-1));
+        
         System.out.println("");
 
     }
@@ -98,11 +104,11 @@ public class Lab1P2_JoseSeron {
         //  System.out.println("entro");
         for (int i = 0; i < arreglo.size(); i++) {
             for (int j = 0; j < arreglo.size(); j++) {
-                if (   (j != arreglo.size() - 1) && ((int)arreglo.get(j) > (int)arreglo.get(j+1)) ){
+                if ( (j != arreglo.size() - 1) && (int)arreglo.get(j) > (int)arreglo.get(j+1) ){
                     
-                    int var = (int)arreglo.get(j);
-                    arreglo.set(j, (int)arreglo.get(j+1));
-                    arreglo.set(j+1, var);
+                    int var1 = (int)arreglo.get(j);
+                    arreglo.set(j, arreglo.get(j+1));
+                    arreglo.set(j+1, var1);
                     bubbleSortAL(arreglo);
                 } else {
                 }
