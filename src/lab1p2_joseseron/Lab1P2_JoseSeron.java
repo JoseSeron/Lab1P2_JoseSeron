@@ -54,13 +54,14 @@ public class Lab1P2_JoseSeron {
     }
     
     public static int[] bubbleSort (int[] arreglo){
-        
+    System.out.println("entro");
         for (int i = 0; i < arreglo.length; i++) {
+                
             for (int j = 0; j < arreglo.length; j++) {
                 if (     (j!=arreglo.length-1)  && arreglo[j]>arreglo[j+1] ) {
                     int var = arreglo[j];
                     arreglo[j]=arreglo[j+1];
-                    arreglo[j+1]=arreglo[j];
+                    arreglo[j+1]=var;
                     
                     bubbleSort(arreglo);
                     
@@ -68,7 +69,10 @@ public class Lab1P2_JoseSeron {
                 
                 }
             }
-        }return arreglo;
+            
+        }
+      
+        return arreglo;
         
 
 
